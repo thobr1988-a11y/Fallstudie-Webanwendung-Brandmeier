@@ -1,11 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CO₂-Atlas – Woher kommt das CO2 wirklich?</title>
+
+  <!-- Bootstrap 5 CSS (via CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous">
+      
+
+      
+  <!-- Optional: Eigenes CSS (später auslagern!) -->
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
-<body>
-    
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <!-- Logo + Text -->
+          <img src="Images/Logo.jpg" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+          CO₂-Transparenz
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Startseite</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Über uns</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Datenquellen</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hauptinhalt -->
+  <main class="flex-grow-1">
+    <div class="container my-5">
+
+      <!-- Hier kommt dein Inhalt hin (Grid, Cards, Tabelle, Formulare etc.) -->
+      <h1 class="mb-4">CO2 Atlas</h1>
+      <p>Woher kommt das CO₂ wirklich?</p>
+
+      <!-- Beispiel: Platzhalter für spätere Tabelle / Inhalte -->
+    <div class="table-responsive mt-4">
+  <table class="table table-striped table-hover table-bordered border-success">
+    <caption class="visually-hidden">CO₂-Emissionen der größten Emittenten (fiktive Daten 2024)</caption>
+    <thead class="table-success">
+      <tr>
+        <th scope="col">Land</th>
+        <th scope="col">Unternehmen</th>
+        <th scope="col">CO₂-Emissionen (Mio. Tonnen)</th>
+        <th scope="col">Jahr</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>China</td>
+        <td>China National Petroleum</td>
+        <td>1.420</td>
+        <td>2024</td>
+      </tr>
+      <tr>
+        <td>USA</td>
+        <td>ExxonMobil</td>
+        <td>580</td>
+        <td>2024</td>
+      </tr>
+      <tr>
+        <td>Deutschland</td>
+        <td>RWE</td>
+        <td>98</td>
+        <td>2024</td>
+      </tr>
+      <!-- gerne mehr Zeilen hinzufügen -->
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4" class="text-muted small">Quelle: fiktive Daten zur Veranschaulichung</td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+      <div class="row">
+        <div class="col-lg-3">
+          <!-- Sidebar / Navigation links -->
+        </div>
+        <div class="col-lg-9">
+          <!-- Haupt-Content-Bereich -->
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-auto">
+    <div class="container text-center">
+      <p class="mb-1">© 2026 [Thomas Brandmeier] – CO₂-Transparenz-Projekt</p>
+      <p class="mb-1 small">
+        <a href="#" class="text-white">Impressum</a> • 
+        <a href="#" class="text-white">Datenschutz</a> • 
+        <a href="#" class="text-white">Nutzungsbedingungen</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (inkl. Popper) – wird für interaktive Elemente benötigt -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
 </body>
 </html>
