@@ -3,20 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CO₂-Atlas – Woher kommt das CO2 wirklich?</title>
+  <title>CO₂-Atlas – Woher kommt das CO₂ wirklich?</title>
 
   <!-- Bootstrap 5 CSS (via CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous">
-      
+    <!-- DataTables CSS für Bootstrap 5 Integration -->
+<link rel="stylesheet" href="https://cdn.datatables.net/2.3.7/css/dataTables.bootstrap5.min.css">  
+
 
       
   <!-- Optional: Eigenes CSS (später auslagern!) -->
   <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body class="d-flex flex-column min-vh-100">
 
   <!-- Header / Navbar -->
@@ -59,7 +62,7 @@
 
       <!-- Beispiel: Platzhalter für spätere Tabelle / Inhalte -->
     <div class="table-responsive mt-4">
-  <table class="table table-striped table-hover table-bordered border-success">
+  <table id="co2table" class="table table-striped table-hover table-bordered border-success">
     <caption class="visually-hidden">CO₂-Emissionen der größten Emittenten (fiktive Daten 2024)</caption>
     <thead class="table-success">
       <tr>
@@ -88,6 +91,36 @@
         <td>98</td>
         <td>2024</td>
       </tr>
+      <tr>
+        <td>Kanada</td>
+        <td>Canadian Natural Resources</td>
+        <td>150</td>
+        <td>2024</td>
+      </tr>
+      <tr>
+        <td>Indien</td>
+        <td>Coal India</td>
+        <td>250</td>
+        <td>2024</td>
+      </tr>
+      <tr>
+        <td>Russland</td>
+        <td>Gazprom</td>
+        <td>200</td>
+        <td>2024</td>
+      </tr>
+      <tr>
+        <td>Saudi-Arabien</td>
+        <td>Saudi Aramco</td>
+        <td>300</td>
+        <td>2024</td>
+      </tr>
+      <tr>
+        <td>Brasilien</td>
+        <td>Petrobras</td>
+        <td>120</td>
+        <td>2024</td>
+        </tr>
       <!-- gerne mehr Zeilen hinzufügen -->
     </tbody>
     <tfoot>
@@ -125,6 +158,28 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+<!-- jQuery (benötigt von DataTables) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
+<!-- DataTables JS Core -->
+<script src="https://cdn.datatables.net/2.3.7/js/dataTables.min.js"></script>
+
+<!-- DataTables Bootstrap 5 Integration -->
+<script src="https://cdn.datatables.net/2.3.7/js/dataTables.bootstrap5.min.js"></script>
+
+<!-- Initialisierung -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  new DataTable('#co2Table', {
+    language: {
+      url: 'https://cdn.datatables.net/plug-ins/2.3.7/i18n/de-DE.json'
+    },
+    pageLength: 10,
+    lengthMenu: [5, 10, 25, 50, 'Alle'],
+    order: [[2, 'desc']],
+    responsive: true
+  });
+});
+</script>
 </body>
 </html>
