@@ -4,39 +4,70 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Impressum – CO₂-Atlas</title>
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- DataTables CSS (falls du es auf dieser Seite brauchst) -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.3.7/css/dataTables.bootstrap5.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-  <!-- Header (kopiere deinen Navbar-Code hier rein) -->
+  <!-- Kopiere deinen gesamten Header hier rein -->
   <header>
-    <!-- ... dein gesamter <nav> Code ... -->
-  </header>
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <!-- Logo + Text -->
+          <img src="images/Logo.jpg" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+          CO₂-Transparenz
+        </a>
 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Startseite</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="ueber-uns.html"></a></li>
+           
+            <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+
+            
+          </ul>
+        </div>
+      </div>
+    
+    </nav>
+  </header>
+ 
   <main class="flex-grow-1">
     <div class="container my-5">
       <h1>Impressum</h1>
       <p>Angaben gemäß § 5 TMG</p>
-
-      <h2>Betreiber / Verantwortlich</h2>
-      <p>Thomas Brandmeier<br>
-      Musterstraße 123<br>
-      12345 Musterstadt<br>
-      E-Mail: thomas.brandmeier@example.com</p>
-
-      <h2>Haftungsausschluss</h2>
-      <p>Die Inhalte dieser Seite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
-
-      <!-- Weitere Absätze: Quellenangabe, Haftung für Links, Urheberrecht usw. -->
+      <p>Thomas Brandmeier<br>Musterstraße 123<br>12345 Musterstadt<br>E-Mail: thomas@example.com</p>
+      <!-- Weitere Inhalte -->
     </div>
   </main>
 
-  <!-- Footer (kopiere deinen Footer-Code hier rein) -->
+  <!-- Kopiere deinen gesamten Footer hier rein -->
   <footer class="bg-dark text-white py-4 mt-auto">
-    <!-- ... dein Footer ... -->
+    <div class="container text-center">
+      <p class="mb-1">© 2026 [Thomas Brandmeier] – CO₂-Transparenz-Projekt</p>
+      <p class="mb-1 small">
+        <a href="impressum.html" class="text-white text-decoration-underline">Impressum</a> •
+        <a href="datenschutz.html" class="text-white text-decoration-underline">Datenschutz</a> 
+       
+      </p>
+    </div>
   </footer>
 
+  <!-- Scripts (am Ende) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <!-- jQuery + DataTables nur, wenn nötig -->
 </body>
 </html>
