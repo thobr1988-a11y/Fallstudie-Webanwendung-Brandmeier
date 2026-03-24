@@ -1,0 +1,37 @@
+/* ====================== RTL Unterstützung ====================== */
+
+/* Allgemein bei RTL */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Navbar: Logo nach rechts, Links nach links bei RTL */
+[dir="rtl"] .navbar-brand {
+  order: 2;                    /* Logo nach rechts */
+}
+
+[dir="rtl"] .navbar-nav {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+/* Lokales Menü (Sidebar) bei RTL nach rechts schieben */
+[dir="rtl"] .col-lg-3 {
+  order: 2;
+}
+
+[dir="rtl"] .col-lg-9 {
+  order: 1;
+}
+
+/* Optional: Text in der Navbar bei RTL spiegeln */
+[dir="rtl"] .nav-link {
+  padding-left: 1rem;
+  padding-right: 0;
+}
+
+/* Toggler Button bei RTL links statt rechts */
+[dir="rtl"] .navbar-toggler {
+  margin-right: auto;
+  margin-left: 0;
+}
