@@ -1,37 +1,118 @@
+:root {
+  --primary-green: #084428;
+  --light-green: #4a4e4c;
+  --dark-green: #163828;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+.lead {
+  color: #495057;
+  font-size: 1.15rem;
+}
+
+.table thead th {
+  background-color: var(--light-green);
+  color: var(--dark-green);
+  font-weight: 600;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  color: var(--primary-green) !important;
+}
+
+footer {
+  background-color: #212529;
+}
+
+footer a {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: var(--primary-green) !important;
+}
+
 /* ====================== RTL Unterstützung ====================== */
 
-/* Allgemein bei RTL */
 [dir="rtl"] {
   text-align: right;
+  direction: rtl;
 }
 
-/* Navbar: Logo nach rechts, Links nach links bei RTL */
+/* Logo bleibt oben zentriert */
 [dir="rtl"] .navbar-brand {
-  order: 2;                    /* Logo nach rechts */
-}
-
-[dir="rtl"] .navbar-nav {
-  margin-left: auto !important;
-  margin-right: 0 !important;
-}
-
-/* Lokales Menü (Sidebar) bei RTL nach rechts schieben */
-[dir="rtl"] .col-lg-3 {
-  order: 2;
-}
-
-[dir="rtl"] .col-lg-9 {
   order: 1;
 }
 
-/* Optional: Text in der Navbar bei RTL spiegeln */
-[dir="rtl"] .nav-link {
-  padding-left: 1rem;
-  padding-right: 0;
+/* Nav-Links bei RTL unter dem Logo */
+[dir="rtl"] .navbar-collapse {
+  order: 2;
+  width: 100%;
+  justify-content: center;
 }
 
-/* Toggler Button bei RTL links statt rechts */
+/* Toggler bei RTL */
 [dir="rtl"] .navbar-toggler {
-  margin-right: auto;
-  margin-left: 0;
+  order: 0;
+  margin-left: auto;
+  margin-right: 0.5rem;
+}
+
+
+.navbar-brand {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.navbar-brand img {
+  width: 65px;
+  height: 65px;
+}
+
+.navbar-brand span {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #198754;
+}
+
+
+@media (min-width: 992px) {
+  .navbar .container-fluid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    margin-bottom: 0.5rem;
+  }
+  
+  .navbar-collapse {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* RTL Anpassung */
+[dir="rtl"] .navbar-brand {
+  order: 2;
+}
+
+[dir="rtl"] .navbar-nav {
+  margin-right: auto !important;
+  margin-left: 0 !important;
 }
