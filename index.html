@@ -1,51 +1,48 @@
-<!DOCTYPE html>
-<html lang="de" dir=" ltr">
+<!doctype html>
+<html lang="de" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CO2 Atlas - Woher kommt das CO2 wirklich?</title>
-<!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
- <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CO₂-Atlas Woher kommt das CO₂ wirklich</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.3.7/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body class="d-flex flex-column min-vh-100">
-
-<header>
+  <header>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <!--logo mitte-->
-      <div class="navbar-brand mx-auto d-flex align-items-center mb-3 mb-lg-0 ">
-        <img src="images/Logo.jpg" alt="CO2 Atlas logo" width="70" height="70" class="mb-2">
-        <span class="fs-4 fw-bold text-success">CO₂-Transparenz</span>
-        <button class="navbar-toggler" type=" button" data-bs-toggle="collapse"
-        data-bs-target="#navbarNav" aria-controls="navbarNav"
-        aria-expanded="false" aria-label="Toggle navigation">
-      <Span class="navbar-toggler-icon"></span></button>
-
-        <!--verlinkung für button-->
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Startseite</a></li>
-            <li class="nav-item"><a class="nav-link" href="Kontakt.html">Kontakt</a></li>
-          </ul>
-        </div>
+  <div class="container-fluid">
+   
+    <div class="navbar-brand mx-auto d-flex flex-column align-items-center order-1 order-lg-1 mb-2 mb-lg-0">
+      <img src="images/Logo.jpg" alt="CO₂-Atlas Logo" width="68" height="68" class="mb-1">
+      <span class="fs-4 fw-bold text-success">CO₂-Transparenz</span>
     </div>
-  </nav>
-</header>
-
- <!-- platzhalter für header --> 
+    <!-- Toggler -->
+    <button class="navbar-toggler order-0 order-lg-3" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Links -->
+    <div class="collapse navbar-collapse order-2 order-lg-2" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Startseite</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  </header>
   <main class="flex-grow-1">
-    <div class="container-my5">
-      <h1 class="mb4 text-center">CO2-Atlas></h1>
-      <p class="lead text-center mb-5">Woher kommt das CO2 wirklich?</p>
-
-      <main class="flex-grow-1">
     <div class="container my-5">
-
-      
+     
       <h1 class="mb-4">CO2 Atlas</h1>
-      <p>Woher kommt das CO₂ wirklich?</p>
-
-      
+      <p>Woher kommt das CO₂ wirklich</p>
+     
     <div class="mt-4">
   <table id="co2Table" class="table table-striped table-hover table-bordered border-success table-sm" style="width:100%">
     <caption class="visually-hidden">CO₂-Emissionen der größten Ausstossenden (fiktive Daten 2024)</caption>
@@ -106,7 +103,7 @@
         <td>120</td>
         <td>2024</td>
         </tr>
-      
+     
     </tbody>
     <tfoot>
       <tr>
@@ -117,28 +114,54 @@
 </div>
       <div class="row">
         <div class="col-lg-3">
-          
+         
         </div>
         <div class="col-lg-9">
-          
+         
         </div>
       </div>
-
     </div>
   </main>
-
-    </div>
-  </main>
-  <!-- platzhalter für footer -->
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
-
-
-<body>
-  
+ 
+  <footer class="bg-dark text-white py-4 mt-auto">
+  <div class="container text-center">
+    <p class="mb-1">© 2026 Thomas Brandmeier - CO₂-Transparenz</p>
+    <p class="mb-1 small">
+      <a href="impressum.html" class="text-white text-decoration-underline">Impressum</a> •
+      <a href="datenschutz.html" class="text-white text-decoration-underline">Datenschutz</a>
+      </p>
+   
+  </div>
+</footer>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/2.3.7/js/dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/2.3.7/js/dataTables.bootstrap5.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  new DataTable('#co2Table', {
+    language: {
+      url: 'https://cdn.datatables.net/plug-ins/2.3.7/i18n/de-DE.json',
+      thousands: '.',
+      decimal: ','
+    },
+    pageLength: 10,
+    lengthMenu: [5, 10, 25, 50, 'Alle'],
+    order: [[2, 'desc']],
+    responsive: true,
+    autoWidth: false,
+    columnDefs: [
+      { responsivePriority: 1, targets: 0 },
+      { responsivePriority: 2, targets: 2 },
+      { responsivePriority: 3, targets: 1 },
+      { responsivePriority: 4, targets: 3 },
+      { targets: 2, type: "num" }
+    ]
+  });
+});
+</script>
 </body>
 </html>
